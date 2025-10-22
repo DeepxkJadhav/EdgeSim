@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EdgeSim — AI Casino Strategy Simulator</title>
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --text: #f0f0f0;
+      --code-bg: #0a3e72;
+      --border: #95a2af;
+      --link: #0969da;
+      --accent: #1f2328;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    h1, h2, h3 {
+      margin-top: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h2::before {
+      content: "•";
+      color: #6e7781;
+      font-size: 1.8rem;
+    }
+    pre, code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, monospace;
+      font-size: 0.92em;
+    }
+    code {
+      background: var(--code-bg);
+      padding: 0.2em 0.4em;
+      border-radius: 6px;
+    }
+    pre {
+      background: var(--code-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    blockquote {
+      margin: 1.2rem 0;
+      padding: 0 1rem;
+      color: #57606a;
+      border-left: 4px solid #d0d7de;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+    }
+    th, td {
+      padding: 0.6rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 600;
+    }
+    .warning {
+      background-color: #fff8c5;
+      padding: 1rem;
+      border-left: 4px solid #d9a300;
+      margin: 1.5rem 0;
+    }
+    .footer-note {
+      font-style: italic;
+      color: #57606a;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<h1>EdgeSim</h1>
+<p><strong>AI-Powered Casino Strategy Simulator for Research &amp; Education</strong><br>
+<em>Offline • Ethical • Windows-Compatible</em></p>
+
+<h2>🎯 Overview</h2>
+<p><strong>EdgeSim</strong> is a research-oriented simulation suite designed for AI/ML developers, game theorists, and quantitative enthusiasts to explore <strong>reinforcement learning</strong>, <strong>probabilistic modeling</strong>, and <strong>risk-aware decision-making</strong> in stochastic environments like:</p>
+<ul>
+  <li>Roulette</li>
+  <li>Blackjack</li>
+  <li>Slot machines</li>
+</ul>
+
+<div class="warning">
+  ⚠️ <strong>This software does NOT interact with real online casinos.</strong><br>
+  All game mechanics, random number generation, and outcome sequences are simulated <strong>locally on your machine</strong>. It is built strictly for <strong>educational, experimental, and algorithmic research purposes</strong>.
+</div>
+
+<blockquote>
+  Think of it as a <em>"flight simulator for gambling strategies"</em>—you can test theories, train agents, and visualize statistical edges, but you never leave the lab.
+</blockquote>
+
+<h2>🔬 Core Capabilities</h2>
+
+<h3>🎲 Realistic Game Simulations</h3>
+<ul>
+  <li><strong>European &amp; American Roulette</strong> (with accurate house edge modeling)</li>
+  <li><strong>Blackjack</strong> (standard rules, dealer logic, basic strategy baseline)</li>
+  <li><strong>Pseudo-slot machines</strong> (configurable RTP, volatility, symbol distributions)</li>
+</ul>
+
+<h3>🤖 AI-Driven Strategy Engine</h3>
+<ul>
+  <li>Train <strong>reinforcement learning agents</strong> (PPO, DQN) to optimize betting</li>
+  <li><strong>Monte Carlo Tree Search (MCTS)</strong> for decision lookahead</li>
+  <li><strong>Bayesian changepoint detection</strong> to identify simulated "favorable regimes"</li>
+</ul>
+
+<h3>📊 Edge Detection &amp; Risk Analytics</h3>
+<ul>
+  <li>Dynamic calculation of <strong>expected value (EV)</strong> per decision</li>
+  <li><strong>Kelly Criterion</strong>-based bankroll management</li>
+  <li>Confidence intervals and win-rate forecasting over <strong>10,000+ simulated sessions</strong></li>
+</ul>
+
+<h3>💻 Interactive Dashboard (Windows GUI)</h3>
+<ul>
+  <li>Real-time charts: win/loss, edge probability, volatility</li>
+  <li>Session replay &amp; strategy comparison</li>
+  <li>Export logs to <strong>CSV/JSON</strong> for further analysis</li>
+</ul>
+
+<h2>🛠️ Technology Stack</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Technology</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Core Engine</strong></td><td>Python 3.10+</td></tr>
+    <tr><td><strong>ML/RL</strong></td><td>PyTorch, Stable-Baselines3, NumPy, SciPy</td></tr>
+    <tr><td><strong>Simulation</strong></td><td>Custom Gym-compatible environments</td></tr>
+    <tr><td><strong>UI Framework</strong></td><td>PyQt6 (native Windows look &amp; feel)</td></tr>
+    <tr><td><strong>Packaging</strong></td><td>PyInstaller → Standalone <code>.exe</code></td></tr>
+    <tr><td><strong>Visualization</strong></td><td>Matplotlib, Plotly (embedded in GUI)</td></tr>
+    <tr><td><strong>Logging</strong></td><td>Structured JSON + CSV output</td></tr>
+  </tbody>
+</table>
+
+<h2>📦 Installation (Windows)</h2>
+<p><strong>Prerequisites</strong>: Windows 10/11, 8GB+ RAM recommended</p>
+
+<h3>Option 1: Pre-built Executable (Recommended)</h3>
+<ol>
+  <li>Download the latest release from <a href="https://github.com/DeepxkJadhav/EdgeSim/releases">GitHub Releases</a></li>
+  <li>Extract the ZIP file</li>
+  <li>Run <code>EdgeSim.exe</code> — no installation required</li>
+</ol>
+
+<h3>Option 2: From Source</h3>
+<pre><code>git clone https://github.com/DeepxkJadhav/EdgeSim.git
+cd EdgeSim
+pip install -r requirements.txt
+python main.py</code></pre>
+
+<h3>To build your own <code>.exe</code>:</h3>
+<pre><code>pyinstaller --onefile --windowed --name EdgeSim main.py</code></pre>
+
+<h2>🧪 Example Use Cases</h2>
+<ul>
+  <li><strong>Research</strong>: Test how RL agents adapt to changing house edges</li>
+  <li><strong>Education</strong>: Visualize the law of large numbers in action</li>
+  <li><strong>Algorithm Development</strong>: Benchmark your custom betting strategy against baselines</li>
+  <li><strong>Risk Modeling</strong>: Simulate 100,000 sessions to evaluate drawdown risk</li>
+</ul>
+<p>💡 <strong>Tip</strong>: Use the <strong>"Strategy Lab"</strong> tab to code your own betting logic in Python and plug it directly into the simulator.</p>
+
+<h2>⚖️ Ethical &amp; Legal Disclaimer</h2>
+<p><strong>EdgeSim is NOT a gambling tool.</strong></p>
+<ul>
+  <li>It <strong>never connects to the internet</strong> during simulation (unless you manually load external configs).</li>
+  <li>It <strong>does not scrape, automate, or interact</strong> with any real casino website or API.</li>
+  <li>All outcomes are generated using <strong>local pseudorandom number generators</strong> with reproducible seeds.</li>
+</ul>
+<blockquote>
+  Using AI to gain an advantage on real-money gambling platforms violates terms of service and may be illegal. This project exists <strong>solely for simulation, learning, and ethical AI research</strong>.
+</blockquote>
+
+<h2>🧑‍💻 For Developers</h2>
+<ul>
+  <li>Extend game rules via the <code>games/</code> module</li>
+  <li>Plug in custom RL agents in <code>agents/</code></li>
+  <li>Modify risk models in <code>analytics/risk_engine.py</code></li>
+  <li>All UI components are modular (Qt-based)</li>
+</ul>
+<p>Contributions are welcome! Please follow the <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+
+<h2>📜 License</h2>
+<p><strong>MIT License</strong> — Free for personal, academic, and open-source use.<br>
+<em>Not for commercial deployment in gambling-adjacent products.</em></p>
+
+<h2>🌟 Built With Passion By</h2>
+<p><strong>Deepak Jadhav</strong><br>
+AI/ML Developer | GitHub: <a href="https://github.com/DeepxkJadhav">@DeepxkJadhav</a><br>
+<em>"Code is my jutsu."</em></p>
+
+<div class="footer-note">
+  🔒 <strong>Remember</strong>: The only guaranteed winning move in gambling is not to play.<br>
+  But in simulation? You can learn, iterate, and master the math—safely.
+</div>
+
+</body>
+</html>
